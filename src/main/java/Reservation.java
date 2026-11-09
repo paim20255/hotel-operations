@@ -45,4 +45,7 @@ public class Reservation {
     public boolean isWeekend() {
         return !weekend;
     }
+
+
+
 }
