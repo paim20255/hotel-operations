@@ -20,6 +20,8 @@ public class Employee {
     public void punchIn() {
         LocalDateTime time = LocalDateTime.now();
         int hours = time.getHour();
+
+        this.startTime = hours;
     }
 
 
@@ -28,12 +30,18 @@ public class Employee {
         this.hoursWorked = this.hoursWorked + hoursToday;
     }
     public void punchOut() {
+        LocalDateTime time = LocalDateTime.now();
+        int outTime = time.getHour();
+
+        int hoursToday = outTime - this.startTime;
+        this.hoursWorked = this.hoursWorked + hoursToday;
 
     }
 
     public double getTotalPay() {
         double totalPay = this.hoursWorked * this.payRate;
         return totalPay;
+
     }
 
 
