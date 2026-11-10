@@ -49,7 +49,7 @@ public class Employee {
         return names;
     }
 
-    public double getPayRate() {
+   public double getPayRate() {
         return payRate;
     }
 
