@@ -11,12 +11,19 @@ public class Main {
         Employee Dave = new Employee("Dave", 15.0, 20.0, 10);
 
         Nate.punchIn(9);
+        Nate.punchIn();
 
         Dave.punchIn(10);
+        Dave.punchIn();
 
         Nate.punchOut(17);
+        Nate.punchOut();
 
         Dave.punchOut(18);
+        Dave.punchOut();
+
+        System.out.println("Nate Worked a total of: " + Nate.getHoursWorked());
+        System.out.println("Dave Worked a total of: " + Dave.getHoursWorked());
 
     }
 }

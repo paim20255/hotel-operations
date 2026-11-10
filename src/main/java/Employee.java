@@ -27,6 +27,9 @@ public class Employee {
         int hoursToday = outTime - this.startTime;
         this.hoursWorked = this.hoursWorked + hoursToday;
     }
+    public void punchOut() {
+
+    }
 
     public double getTotalPay() {
         double totalPay = this.hoursWorked * this.payRate;
