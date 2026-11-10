@@ -1,3 +1,6 @@
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+
 public class Employee {
     private String names;
     private double payRate;
@@ -14,6 +17,12 @@ public class Employee {
         System.out.println("hey, " + this.names + " " + "Punched in at" + " " + this.startTime);
         this.startTime = time;
     }
+    public void punchIn() {
+        LocalDateTime time = LocalDateTime.now();
+        int hours = time.getHour();
+    }
+
+
     public void punchOut(int outTime) {
         int hoursToday = outTime - this.startTime;
         this.hoursWorked = this.hoursWorked + hoursToday;
