@@ -2,11 +2,21 @@ public class Employee {
     private String names;
     private double payRate;
     private double hoursWorked;
+    private int startTime;
 
-    public Employee(String names, double payRate, double hoursWorked) {
+    public Employee(String names, double payRate, double hoursWorked, int startTime) {
         this.names = names;
         this.payRate = payRate;
         this.hoursWorked = hoursWorked;
+        this.startTime = startTime;
+    }
+    public void punchIn(int time) {
+        System.out.println("hey, " + this.names + " " + "Punched in at" + " " + this.startTime);
+        this.startTime = time;
+    }
+    public void punchOut(int outTime) {
+        int hoursToday = outTime - this.startTime;
+        this.hoursWorked = this.hoursWorked + hoursToday;
     }
 
     public double getTotalPay() {
